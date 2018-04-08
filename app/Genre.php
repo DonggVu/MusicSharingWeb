@@ -8,6 +8,7 @@ class Genre extends Model
 {
     protected $table = "genre";
     protected $fillable = ['name'];
+    public $timestamps = false;
 
     public function Track()
     {

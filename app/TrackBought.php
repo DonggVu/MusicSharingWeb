@@ -8,6 +8,7 @@ class TrackBought extends Model
 {
     protected $table = "track_bought";
     protected $fillable = ['user_id', 'track_id'];
+    public $timestamps = false;
 
     public function Track()
     {

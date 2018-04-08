@@ -18,3 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('upload', 'TrackController@getUploadForm')->middleware('auth');
+
+Route::post('upload', 'TrackController@uploadFile') -> name('upload');

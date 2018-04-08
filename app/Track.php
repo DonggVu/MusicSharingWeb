@@ -8,6 +8,7 @@ class Track extends Model
 {
     protected $table = "track";
     protected $fillable = ['name', 'album', 'artist', 'date', 'price', 'path', 'genre_id', 'user_id'];
+    public $timestamps = false;
 
     public function Genre()
     {
