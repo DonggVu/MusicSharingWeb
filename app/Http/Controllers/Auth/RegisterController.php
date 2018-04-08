@@ -53,7 +53,7 @@ class RegisterController extends Controller
             'password' => 'required|string|min:6|confirmed',
             'full_name' => 'required|string|max:255',
             'birthday' => 'required|date',
-            'phone' => 'required|string|max:13',
+            'phone' => array('required','string','regex:/(09)[0-9]{8}|(01)[0-9]{9}/'),
         ]);
     }
 
