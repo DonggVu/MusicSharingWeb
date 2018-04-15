@@ -22,6 +22,7 @@ class CreateUserTable extends Migration
             $table->string('email');
             $table->string('phone');
             $table->float('wallet')->default(0);
+            $table->boolean('is_admin')->default(false);
             $table->rememberToken();
         });
     }

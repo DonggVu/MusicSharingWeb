@@ -19,7 +19,7 @@ class User extends Model implements
 {
     use Authenticatable, Authorizable, CanResetPassword, Notifiable;
     protected $fillable = ['username', 'password', 'full_name', 'birthday', 'email', 'phone', 'wallet'];
-    protected $hidden = ['password', 'remember_token'];
+    protected $hidden = ['password', 'remember_token', 'is_admin'];
     protected $table = "user";
     public $timestamps = false;
 
